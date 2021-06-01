@@ -23,10 +23,10 @@ module P8push
       end
     end
 
-    def initialize
-      @private_key = File.read(ENV['APN_PRIVATE_KEY'])
-      @team_id = ENV['APN_TEAM_ID']
-      @key_id = ENV['APN_KEY_ID']
+    def initialize(private_key:, team_id:, apn_key_id:)
+      @private_key = private_key
+      @team_id = team_id
+      @key_id = apn_key_id
       @timeout = Float(ENV['APN_TIMEOUT'] || 2.0)
     end
 
