@@ -9,18 +9,16 @@ module P8push
 
   class Client
     attr_accessor :jwt_uri
-    class << self
-      def development
-        client = self.new
-        client.jwt_uri = APPLE_DEVELOPMENT_JWT_URI
-        client
-      end
+    def self.development
+      client = self.new
+      client.jwt_uri = APPLE_DEVELOPMENT_JWT_URI
+      client
+    end
 
-      def production
-        client = self.new
-        client.jwt_uri = APPLE_PRODUCTION_JWT_URI
-        client
-      end
+    def self.production
+      client = self.new
+      client.jwt_uri = APPLE_PRODUCTION_JWT_URI
+      client
     end
 
     def initialize(private_key:, team_id:, apn_key_id:)
