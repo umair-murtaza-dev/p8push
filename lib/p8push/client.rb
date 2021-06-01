@@ -11,6 +11,7 @@ module P8push
     attr_accessor :jwt_uri
     class << self
       def development
+        debugger
         client = self.new
         client.jwt_uri = APPLE_DEVELOPMENT_JWT_URI
         client
@@ -18,6 +19,7 @@ module P8push
 
       def production
         client = self.new
+        debugger
         client.jwt_uri = APPLE_PRODUCTION_JWT_URI
         client
       end
