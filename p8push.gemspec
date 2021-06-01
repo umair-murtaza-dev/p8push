@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'jwt', '2.2.2'
   s.add_dependency 'commander', '4.6.0'
-  s.add_dependency 'json', '2.1.0'
+  s.add_dependency 'json', '2.5.1'
   s.add_dependency 'net-http2', '0.15.0'
 
   s.files         = Dir['./**/*'].reject { |file| file =~ /\.\/(bin|log|pkg|script|spec|test|vendor)/ }
